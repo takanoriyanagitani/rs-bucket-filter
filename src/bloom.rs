@@ -1,9 +1,15 @@
+//! Filters buckets using bloom(like) filter.
+
 use std::collections::BTreeMap;
 
 use crate::{bucket::Bucket, evt::Event};
 
+/// List of bloom check results.
 pub enum BloomResult {
-    MayExists,
+    /// An item may exist.
+    MayExist,
+
+    /// An item does not exist.
     Missing,
 }
 
@@ -101,7 +107,7 @@ where
 {
     match bloom(bucket, filter) {
         BloomResult::Missing => Ok(vec![]),
-        BloomResult::MayExists => getter(shared_db, bucket, filter),
+        BloomResult::MayExist => getter(shared_db, bucket, filter),
     }
 }
 
