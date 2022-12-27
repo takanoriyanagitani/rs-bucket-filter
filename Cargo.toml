@@ -2,6 +2,10 @@
 name = "rs-bucket-filter"
 version = "0.1.0"
 edition = "2021"
+description = "Skips slow scans using cache, bloom filter, ..."
+license = "Apache-2.0"
+documentation = "https://docs.rs/crate/rs-bucket-filter"
+repository = "https://github.com/takanoriyanagitani/rs-bucket-filter"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
