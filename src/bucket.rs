@@ -1,9 +1,14 @@
+//! A key/value pairs container.
+
+/// An ID of the container which can have many key/value pairs.
 #[derive(Clone, PartialEq, PartialOrd, Eq, Ord)]
 pub struct Bucket {
+    /// The name of this bucket.
     name: String,
 }
 
 impl Bucket {
+    /// Gets the name of this bucket as str.
     pub fn as_str(&self) -> &str {
         self.name.as_str()
     }
