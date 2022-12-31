@@ -1,8 +1,10 @@
+//! Filters buckets using a cache.
+
 use std::collections::BTreeSet;
 
 use crate::{bucket::Bucket, evt::Event};
 
-/// Scans from a slow db if a bucket is in a cache.
+/// Tries to scan values from a slow db if a bucket is in a cache.
 ///
 /// # Arguments
 ///
